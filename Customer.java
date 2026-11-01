@@ -1,36 +1,69 @@
+
 public class Customer {
     private int satisfaction;
     private final int customerNo;
     private Order order;
     private CustomerStatus status;
 
+    private int servedTurn;
+    private int readyToPayTurn;
+
     public Customer(int num) {
         customerNo = num;
         satisfaction = 100;
         order = null;
+        status = CustomerStatus.WAITING;
+        servedTurn = -1;
+        readyToPayTurn = -1;
     }
+
     public int getSatisfaction() {
         return satisfaction;
     }
+
     public int getCustomerNo() {
         return customerNo;
     }
+
     public void setSatisfaction(int sat) {
-        satisfaction = sat;
+        satisfaction = Math.max(0, Math.min(100, sat));
     }
-    public void decreaseSatisfaction(int amount){
-        satisfaction -= amount;
+
+    public void decreaseSatisfaction(int amount) {
+        setSatisfaction(satisfaction - amount);
     }
+
     public void setOrder(MenuItem orderItem) {
         order = new Order(orderItem);
     }
+
     public Order getOrder() {
         return order;
     }
-    public CustomerStatus getCustomerStatus(){
+
+    public CustomerStatus getCustomerStatus() {
         return status;
     }
-    public void setCustomerStatus(CustomerStatus s){
+
+    public void setCustomerStatus(CustomerStatus s) {
         status = s;
+    }
+
+    public int getServedTurn() {
+        return servedTurn;
+    }
+
+    public void markServed(int turnNo) {
+        servedTurn = turnNo;
+        status = CustomerStatus.SERVED;
+    }
+
+    public int getReadyToPayTurn() {
+        return readyToPayTurn;
+    }
+
+    public void markReadyToPay(int turnNo) {
+        readyToPayTurn = turnNo;
+        status = CustomerStatus.READY_TO_PAY;
     }
 }

@@ -1,3 +1,10 @@
-public enum CustomerStatus{
-    READY_TO_PAY, PAID;
+
+public enum CustomerStatus {
+    WAITING,
+    SEATED,
+    SERVED,
+    READY_TO_PAY,
+    PAID,
+    LEFT;
 }
+
