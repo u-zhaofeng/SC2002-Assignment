@@ -58,7 +58,11 @@ public class Customer {
     }
 
     public void setOrder(MenuItem orderItem) {
-        order = new Order(orderItem, calculateBillCents(orderItem));
+        setOrder(orderItem, calculateBillCents(orderItem));
+    }
+
+    public void setOrder(MenuItem orderItem, int billCents) {
+        order = new Order(orderItem, billCents);
     }
 
     public Order getOrder() {

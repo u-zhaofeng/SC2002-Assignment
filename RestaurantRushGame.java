@@ -23,6 +23,8 @@ class RestaurantRushGame {
     private Chef chef;
     private Cashier cashier;
     private CustomerFactory customerFactory;
+    private Host host;
+    private HappyHourPolicy happyHour;
 
     private int servedCount = 0;
     private int unhappyDepartures = 0;
@@ -41,11 +43,14 @@ class RestaurantRushGame {
         menu.add(new MenuItem("Salad", 1, 900));
         menu.add(new MenuItem("Burger", 1, 1500));
         menu.add(new MenuItem("Pasta", 2, 1800));
+        menu.add(new ComboMeal(menu.get(0), menu.get(2)));
 
         waiter = new Waiter();
         chef = new Chef();
         cashier = new Cashier();
         customerFactory = new CustomerFactory();
+        host = new Host();
+        happyHour = new HappyHourPolicy();
     }
 
     public static void main(String[] args) {
@@ -58,14 +63,15 @@ class RestaurantRushGame {
     private void StartGame() {
 
         System.out.println("Restaurant Rush Game Starting...");
-        System.out.println("Stage 2 - VIP and Critic Customer Behaviour");
+        System.out.println("Stage 3 - Host, ComboMeal and Happy Hour");
 
         for (int turnNo = 1; turnNo <= totalTurns; turnNo++) {
 
             System.out.println(
                     "\n========= Turn " + turnNo + " =========");
 
-            displayGameState();
+            displayGameState(turnNo);
+            processHappyHourChoice(turnNo);
 
             System.out.println("\n--- Arrivals ---");
 
@@ -85,7 +91,15 @@ class RestaurantRushGame {
                 System.out.println("No new arrivals.");
             }
 
+            happyHour.recoverWaitingCustomers(waitingQueue, tables, turnNo);
+
             System.out.println("\n--- Manager Choices ---");
+
+            System.out.println("\nAvailable Host Tasks:");
+            for (String task : host.getTasks(waitingQueue, tables)) {
+                System.out.println("- " + task);
+            }
+            processHostChoice();
 
             System.out.println("\nAvailable Waiter Tasks:");
             for (String task :
@@ -112,10 +126,15 @@ class RestaurantRushGame {
         displayFinalResults();
     }
 
-    private void displayGameState() {
+    private void displayGameState(int turnNo) {
 
         System.out.printf(
                 "Revenue: $%.2f%n", revenueCents / 100.0);
+
+        System.out.println("Happy Hour: "
+                + (happyHour.isActive(turnNo)
+                    ? "ACTIVE (" + happyHour.remainingTurns(turnNo) + " turn(s) left)"
+                    : (happyHour.hasBeenActivated() ? "expired" : "available")));
 
         System.out.println(
                 "Average Paid Customers Satisfaction: "
@@ -166,6 +185,11 @@ class RestaurantRushGame {
 
         System.out.println("\nAvailable Tasks:");
 
+        System.out.println("Host:");
+        for (String task : host.getTasks(waitingQueue, tables)) {
+            System.out.println("- " + task);
+        }
+
         System.out.println("Waiter:");
         for (String task :
                 waiter.getTasks(waitingQueue, tables)) {
@@ -179,6 +203,55 @@ class RestaurantRushGame {
 
         System.out.println(
                 "Cashier: Automatic payment when eligible");
+    }
+
+    private void processHappyHourChoice(int turnNo) {
+        if (happyHour.hasBeenActivated()) {
+            System.out.println("Happy Hour remaining this turn: "
+                    + happyHour.remainingTurns(turnNo));
+            return;
+        }
+        while (true) {
+            System.out.println("\nHappy Hour (one activation per game):");
+            System.out.println("1. Activate now (this turn and next)");
+            System.out.println("2. Not now");
+            int choice = readInt("Choose Happy Hour action: ");
+            if (choice == 1) {
+                happyHour.activate(turnNo);
+                System.out.println("Happy Hour activated for turns "
+                        + turnNo + " and " + (turnNo + 1) + ".");
+                return;
+            }
+            if (choice == 2) {
+                return;
+            }
+            System.out.println("Invalid: enter 1 or 2. Please try again.");
+        }
+    }
+
+    private void processHostChoice() {
+        while (true) {
+            System.out.println("\nHost:\n1. Seat queuing customer\n2. Wait");
+            int choice = readInt("Choose Host action: ");
+            if (choice == 2) {
+                System.out.println("Host waits.");
+                return;
+            }
+            if (choice != 1) {
+                System.out.println("Invalid: enter 1 or 2. Please try again.");
+                continue;
+            }
+            int customerNo = readInt("Enter customer number: ");
+            int tableNo = readInt("Enter table number: ");
+            Customer customer = waitingQueue.findCustomer(customerNo);
+            Table table = findTable(tableNo);
+            if (host.seatCustomer(customer, table, waitingQueue)) {
+                System.out.println("Host seated Customer " + customerNo
+                        + " at Table " + tableNo);
+                return;
+            }
+            System.out.println("Invalid: customer not queued or table is occupied. Please try again.");
+        }
     }
 
     private void processWaiterChoice(int turnNo) {
@@ -244,7 +317,8 @@ class RestaurantRushGame {
                     MenuItem orderItem =
                             cust.chooseFood(menu);
 
-                    if (waiter.takeOrder(table, orderItem)) {
+                    int billCents = happyHour.billCents(cust, orderItem, turnNo);
+                    if (waiter.takeOrder(table, orderItem, billCents)) {
 
                         System.out.printf(
                                 "Customer %d (%s) chooses %s "

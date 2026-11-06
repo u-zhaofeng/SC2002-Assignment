@@ -1,8 +1,8 @@
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Waiter {
+    private final SeatingService seating = new SeatingService();
 
     public List<String> getTasks(
             WaitingQueue waitingQueue,
@@ -49,24 +49,7 @@ public class Waiter {
             Customer cust,
             Table table,
             WaitingQueue waitingQueue) {
-
-        if (cust == null || table == null) {
-            return false;
-        }
-
-        if (table.getCustomer() != null) {
-            return false;
-        }
-
-        if (!waitingQueue.getCustomerInQueue().contains(cust)) {
-            return false;
-        }
-
-        table.fillTable(cust);
-        waitingQueue.removeCustomer(cust);
-        cust.setCustomerStatus(CustomerStatus.SEATED);
-
-        return true;
+        return seating.seatCustomer(cust, table, waitingQueue);
     }
 
     public boolean takeOrder(Table table, MenuItem orderItem) {
@@ -82,6 +65,18 @@ public class Waiter {
         }
 
         cust.setOrder(orderItem);
+        return true;
+    }
+
+    public boolean takeOrder(Table table, MenuItem orderItem, int billCents) {
+        if (table == null || table.getCustomer() == null) {
+            return false;
+        }
+        Customer cust = table.getCustomer();
+        if (cust.getOrder() != null || cust.getCustomerStatus() != CustomerStatus.SEATED) {
+            return false;
+        }
+        cust.setOrder(orderItem, billCents);
         return true;
     }
 
