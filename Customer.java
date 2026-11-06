@@ -1,3 +1,4 @@
+import java.util.List;
 
 public class Customer {
     private int satisfaction;
@@ -33,8 +34,31 @@ public class Customer {
         setSatisfaction(satisfaction - amount);
     }
 
+    public String getTypeLabel() {
+        return "Regular";
+    }
+
+    public int getWaitingSatisfactionLoss() {
+        return 8;
+    }
+
+    public void applyWaitingPenalty() {
+        decreaseSatisfaction(getWaitingSatisfactionLoss());
+    }
+
+    public MenuItem chooseFood(List<MenuItem> menu) {
+        if (menu == null || menu.isEmpty()) {
+            throw new IllegalArgumentException("Menu cannot be empty");
+        }
+        return menu.get((customerNo - 1) % menu.size());
+    }
+
+    public int calculateBillCents(MenuItem item) {
+        return item.getPrice();
+    }
+
     public void setOrder(MenuItem orderItem) {
-        order = new Order(orderItem);
+        order = new Order(orderItem, calculateBillCents(orderItem));
     }
 
     public Order getOrder() {
