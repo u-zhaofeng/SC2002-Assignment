@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.Scanner;
@@ -23,8 +22,8 @@ class RestaurantRushGame {
     private Waiter waiter;
     private Chef chef;
     private Cashier cashier;
+    private CustomerFactory customerFactory;
 
-    // Additional statistics for Stage 1
     private int servedCount = 0;
     private int unhappyDepartures = 0;
 
@@ -46,6 +45,7 @@ class RestaurantRushGame {
         waiter = new Waiter();
         chef = new Chef();
         cashier = new Cashier();
+        customerFactory = new CustomerFactory();
     }
 
     public static void main(String[] args) {
@@ -58,27 +58,26 @@ class RestaurantRushGame {
     private void StartGame() {
 
         System.out.println("Restaurant Rush Game Starting...");
-        System.out.println("Stage 1 - Basic Restaurant Operation");
+        System.out.println("Stage 2 - VIP and Critic Customer Behaviour");
 
         for (int turnNo = 1; turnNo <= totalTurns; turnNo++) {
 
             System.out.println(
                     "\n========= Turn " + turnNo + " =========");
 
-            // Start-of-turn display
             displayGameState();
 
-            // Step 1: Arrivals
             System.out.println("\n--- Arrivals ---");
 
             if (arrivalTurns.contains(turnNo)) {
                 Customer newCustomer =
-                        new Customer(currCustomerNo);
+                        customerFactory.createCustomer(currCustomerNo);
 
                 waitingQueue.addCustomer(newCustomer);
 
                 System.out.println("Customer "
-                        + currCustomerNo + " arrives.");
+                        + currCustomerNo + " ("
+                        + newCustomer.getTypeLabel() + ") arrives.");
 
                 currCustomerNo++;
             }
@@ -86,8 +85,6 @@ class RestaurantRushGame {
                 System.out.println("No new arrivals.");
             }
 
-            // Step 2 and 3: Manager choices,
-            // Waiter first, then Chef
             System.out.println("\n--- Manager Choices ---");
 
             System.out.println("\nAvailable Waiter Tasks:");
@@ -105,20 +102,16 @@ class RestaurantRushGame {
 
             processChefChoice();
 
-            // Step 4: Eating and payment
             processEatingAndPayment(turnNo);
 
-            // Step 5: Satisfaction and abandonment
             processSatisfaction();
 
-            // Step 6: End-of-turn summary
             displayTurnResults(turnNo);
         }
 
         displayFinalResults();
     }
 
-    // Displays all required game information
     private void displayGameState() {
 
         System.out.printf(
@@ -140,6 +133,7 @@ class RestaurantRushGame {
                 System.out.println(
                         "Customer "
                         + waitingCustomer.getCustomerNo()
+                        + " (" + waitingCustomer.getTypeLabel() + ")"
                         + " | Satisfaction: "
                         + waitingCustomer.getSatisfaction()
                         + " | Status: "
@@ -159,10 +153,11 @@ class RestaurantRushGame {
                 Customer cust = table.getCustomer();
 
                 System.out.printf(
-                        "Table %d: Customer %d | Satisfaction %d"
+                        "Table %d: Customer %d (%s) | Satisfaction %d"
                         + " | Status: %s | Order: %s%n",
                         table.getTableNo(),
                         cust.getCustomerNo(),
+                        cust.getTypeLabel(),
                         cust.getSatisfaction(),
                         cust.getCustomerStatus(),
                         constructOrderString(table));
@@ -186,7 +181,6 @@ class RestaurantRushGame {
                 "Cashier: Automatic payment when eligible");
     }
 
-    // Waiter can perform at most one valid task
     private void processWaiterChoice(int turnNo) {
 
         while (true) {
@@ -247,18 +241,19 @@ class RestaurantRushGame {
 
                     Customer cust = table.getCustomer();
 
-                    // Food is chosen by the customer,
-                    // not the manager.
                     MenuItem orderItem =
-                            chooseCustomerFood(cust);
+                            cust.chooseFood(menu);
 
                     if (waiter.takeOrder(table, orderItem)) {
 
                         System.out.printf(
-                                "Customer %d chooses %s ($%.2f)%n",
+                                "Customer %d (%s) chooses %s "
+                                + "(menu $%.2f, bill $%.2f)%n",
                                 cust.getCustomerNo(),
+                                cust.getTypeLabel(),
                                 orderItem.getName(),
-                                orderItem.getPrice() / 100.0);
+                                orderItem.getPrice() / 100.0,
+                                cust.getOrder().getBillCents() / 100.0);
 
                         return;
                     }
@@ -300,12 +295,10 @@ class RestaurantRushGame {
                             "Invalid choice. Enter 1 to 4.");
             }
 
-            // Invalid choices do not consume the task.
             System.out.println("Please try again.");
         }
     }
 
-    // Chef can prepare one unit of one order
     private void processChefChoice() {
 
         while (true) {
@@ -356,16 +349,6 @@ class RestaurantRushGame {
         }
     }
 
-    // Customer food choice is deterministic
-    private MenuItem chooseCustomerFood(Customer cust) {
-
-        int index =
-                (cust.getCustomerNo() - 1) % menu.size();
-
-        return menu.get(index);
-    }
-
-    // Finds a table by its number
     private Table findTable(int tableNo) {
 
         for (Table table : tables) {
@@ -377,7 +360,6 @@ class RestaurantRushGame {
         return null;
     }
 
-    // Handles eating and automatic payment
     private void processEatingAndPayment(int turnNo) {
 
         System.out.println("\n--- Eating and Payment ---");
@@ -402,22 +384,22 @@ class RestaurantRushGame {
             }
         }
 
-        // Cashier handles at most one eligible customer.
         Customer paidCustomer =
                 cashier.handlePayments(tables, turnNo);
 
         if (paidCustomer != null) {
 
             int priceCents = paidCustomer.getOrder()
-                    .getOrderItem().getPrice();
+                    .getBillCents();
 
             revenueCents += priceCents;
 
             paidCustomers.add(paidCustomer);
 
             System.out.printf(
-                    "Customer %d paid $%.2f%n",
+                    "Customer %d (%s) paid $%.2f%n",
                     paidCustomer.getCustomerNo(),
+                    paidCustomer.getTypeLabel(),
                     priceCents / 100.0);
 
             System.out.println("Table has been freed.");
@@ -428,8 +410,6 @@ class RestaurantRushGame {
         }
     }
 
-    // Regular customers lose 8 satisfaction
-    // while waiting or seated but not served
     private void processSatisfaction() {
 
         System.out.println(
@@ -441,7 +421,7 @@ class RestaurantRushGame {
 
         for (Customer cust : waitingCustomers) {
 
-            cust.decreaseSatisfaction(8);
+            cust.applyWaitingPenalty();
 
             if (cust.getSatisfaction() == 0) {
 
@@ -462,7 +442,7 @@ class RestaurantRushGame {
             if (cust.getCustomerStatus()
                     == CustomerStatus.SEATED) {
 
-                cust.decreaseSatisfaction(8);
+                cust.applyWaitingPenalty();
 
                 if (cust.getSatisfaction() == 0) {
 
@@ -490,10 +470,10 @@ class RestaurantRushGame {
 
         System.out.println(
                 "Customer " + cust.getCustomerNo()
+                + " (" + cust.getTypeLabel() + ")"
                 + " abandoned the restaurant.");
     }
 
-    // Handles non-numeric input without crashing
     private int readInt(String message) {
 
         while (true) {
@@ -517,7 +497,6 @@ class RestaurantRushGame {
         }
     }
 
-    // Average satisfaction of paid customers
     private String calculateAvgCustSatisfaction() {
 
         if (paidCustomers.isEmpty()) {
@@ -543,7 +522,6 @@ class RestaurantRushGame {
         return (double) total / paidCustomers.size();
     }
 
-    // Display order details
     private String constructOrderString(Table table) {
 
         String returnStr = "none";
@@ -556,7 +534,9 @@ class RestaurantRushGame {
             returnStr =
                     order.getOrderItem().getName()
                     + " "
-                    + order.getOrderStatus().name();
+                    + order.getOrderStatus().name()
+                    + String.format(" (bill $%.2f)",
+                            order.getBillCents() / 100.0);
 
             if (order.getOrderStatus()
                     == OrderStatus.PREPARING) {
