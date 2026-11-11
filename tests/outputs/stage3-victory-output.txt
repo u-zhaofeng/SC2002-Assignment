@@ -1,0 +1,1265 @@
+Restaurant Rush Game Starting...
+Stage 3 - Host, ComboMeal and Happy Hour
+
+========= Turn 1 =========
+Revenue: $0.00
+Happy Hour: available
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Host:
+- Wait
+Waiter:
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+Happy Hour (one activation per game):
+1. Activate now (this turn and next)
+2. Not now
+Choose Happy Hour action: Happy Hour activated for turns 1 and 2.
+
+--- Arrivals ---
+Customer 1 (Regular) arrives.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Seat a queuing customer
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Enter customer number: Enter table number: Host seated Customer 1 at Table 1
+
+Available Waiter Tasks:
+- Take seated customer order
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Enter table number: Customer 1 (Regular) chooses Salad (menu $9.00, bill $7.20)
+
+Available Chef Tasks:
+- Advance order at Table 1
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Enter table number: Chef prepared one unit.
+Order: Salad READY (bill $7.20)
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 1 ---
+Served Count: 0
+Unhappy Departures: 0
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 1
+
+========= Turn 2 =========
+Revenue: $0.00
+Happy Hour: ACTIVE (1 turn(s) left)
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Customer 1 (Regular) | Satisfaction 92 | Status: SEATED | Order: Salad READY (bill $7.20)
+Table 2: Empty
+
+Available Tasks:
+Host:
+- Wait
+Waiter:
+- Serve a READY order
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 1
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Host waits.
+
+Available Waiter Tasks:
+- Serve a READY order
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Enter table number: Order served to Customer 1
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 2 ---
+Served Count: 1
+Unhappy Departures: 0
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 2
+
+========= Turn 3 =========
+Revenue: $0.00
+Happy Hour: expired
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Customer 1 (Regular) | Satisfaction 100 | Status: SERVED | Order: Salad SERVED (bill $7.20)
+Table 2: Empty
+
+Available Tasks:
+Host:
+- Wait
+Waiter:
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Host waits.
+
+Available Waiter Tasks:
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+Customer 1 finished eating and is READY_TO_PAY.
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 3 ---
+Served Count: 1
+Unhappy Departures: 0
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 3
+
+========= Turn 4 =========
+Revenue: $0.00
+Happy Hour: expired
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Customer 1 (Regular) | Satisfaction 100 | Status: READY_TO_PAY | Order: Salad SERVED (bill $7.20)
+Table 2: Empty
+
+Available Tasks:
+Host:
+- Wait
+Waiter:
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+Customer 2 (VIP) arrives.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Seat a queuing customer
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Host waits.
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+Customer 1 (Regular) paid $7.20
+Table has been freed.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 4 ---
+Served Count: 1
+Unhappy Departures: 0
+Paid Customers: 1
+Revenue: $7.20
+Average Paid Satisfaction: 100.00
+Turns Used: 4
+
+========= Turn 5 =========
+Revenue: $7.20
+Happy Hour: expired
+Average Paid Customers Satisfaction: 100.00
+
+Waiting Queue:
+Customer 2 (VIP) | Satisfaction: 95 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Host:
+- Seat a queuing customer
+- Wait
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Seat a queuing customer
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Enter customer number: Enter table number: Host seated Customer 2 at Table 1
+
+Available Waiter Tasks:
+- Take seated customer order
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Enter table number: Customer 2 (VIP) chooses Burger (menu $15.00, bill $13.50)
+
+Available Chef Tasks:
+- Advance order at Table 1
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Enter table number: Chef prepared one unit.
+Order: Burger READY (bill $13.50)
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 5 ---
+Served Count: 1
+Unhappy Departures: 0
+Paid Customers: 1
+Revenue: $7.20
+Average Paid Satisfaction: 100.00
+Turns Used: 5
+
+========= Turn 6 =========
+Revenue: $7.20
+Happy Hour: expired
+Average Paid Customers Satisfaction: 100.00
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Customer 2 (VIP) | Satisfaction 90 | Status: SEATED | Order: Burger READY (bill $13.50)
+Table 2: Empty
+
+Available Tasks:
+Host:
+- Wait
+Waiter:
+- Serve a READY order
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Host waits.
+
+Available Waiter Tasks:
+- Serve a READY order
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Enter table number: Order served to Customer 2
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 6 ---
+Served Count: 2
+Unhappy Departures: 0
+Paid Customers: 1
+Revenue: $7.20
+Average Paid Satisfaction: 100.00
+Turns Used: 6
+
+========= Turn 7 =========
+Revenue: $7.20
+Happy Hour: expired
+Average Paid Customers Satisfaction: 100.00
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Customer 2 (VIP) | Satisfaction 90 | Status: SERVED | Order: Burger SERVED (bill $13.50)
+Table 2: Empty
+
+Available Tasks:
+Host:
+- Wait
+Waiter:
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+Customer 3 (Critic) arrives.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Seat a queuing customer
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Enter customer number: Enter table number: Host seated Customer 3 at Table 2
+
+Available Waiter Tasks:
+- Take seated customer order
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Enter table number: Customer 3 (Critic) chooses Burger (menu $15.00, bill $15.00)
+
+Available Chef Tasks:
+- Advance order at Table 2
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Enter table number: Chef prepared one unit.
+Order: Burger READY (bill $15.00)
+
+--- Eating and Payment ---
+Customer 2 finished eating and is READY_TO_PAY.
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 7 ---
+Served Count: 2
+Unhappy Departures: 0
+Paid Customers: 1
+Revenue: $7.20
+Average Paid Satisfaction: 100.00
+Turns Used: 7
+
+========= Turn 8 =========
+Revenue: $7.20
+Happy Hour: expired
+Average Paid Customers Satisfaction: 100.00
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Customer 2 (VIP) | Satisfaction 90 | Status: READY_TO_PAY | Order: Burger SERVED (bill $13.50)
+Table 2: Customer 3 (Critic) | Satisfaction 88 | Status: SEATED | Order: Burger READY (bill $15.00)
+
+Available Tasks:
+Host:
+- Wait
+Waiter:
+- Serve a READY order
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Host waits.
+
+Available Waiter Tasks:
+- Serve a READY order
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Enter table number: Order served to Customer 3
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+Customer 2 (VIP) paid $13.50
+Table has been freed.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 8 ---
+Served Count: 3
+Unhappy Departures: 0
+Paid Customers: 2
+Revenue: $20.70
+Average Paid Satisfaction: 95.00
+Turns Used: 8
+
+========= Turn 9 =========
+Revenue: $20.70
+Happy Hour: expired
+Average Paid Customers Satisfaction: 95.00
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Empty
+Table 2: Customer 3 (Critic) | Satisfaction 88 | Status: SERVED | Order: Burger SERVED (bill $15.00)
+
+Available Tasks:
+Host:
+- Wait
+Waiter:
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Host waits.
+
+Available Waiter Tasks:
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+Customer 3 finished eating and is READY_TO_PAY.
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 9 ---
+Served Count: 3
+Unhappy Departures: 0
+Paid Customers: 2
+Revenue: $20.70
+Average Paid Satisfaction: 95.00
+Turns Used: 9
+
+========= Turn 10 =========
+Revenue: $20.70
+Happy Hour: expired
+Average Paid Customers Satisfaction: 95.00
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Empty
+Table 2: Customer 3 (Critic) | Satisfaction 88 | Status: READY_TO_PAY | Order: Burger SERVED (bill $15.00)
+
+Available Tasks:
+Host:
+- Wait
+Waiter:
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+Customer 4 (Regular) arrives.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Seat a queuing customer
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Enter customer number: Enter table number: Host seated Customer 4 at Table 1
+
+Available Waiter Tasks:
+- Take seated customer order
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Enter table number: Customer 4 (Regular) chooses ComboMeal (Salad + Pasta) (menu $24.30, bill $24.30)
+
+Available Chef Tasks:
+- Advance order at Table 1
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Enter table number: Chef prepared one unit.
+Order: ComboMeal (Salad + Pasta) PREPARING (bill $24.30) 1/3
+
+--- Eating and Payment ---
+Customer 3 (Critic) paid $15.00
+Table has been freed.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 10 ---
+Served Count: 3
+Unhappy Departures: 0
+Paid Customers: 3
+Revenue: $35.70
+Average Paid Satisfaction: 92.67
+Turns Used: 10
+
+========= Turn 11 =========
+Revenue: $35.70
+Happy Hour: expired
+Average Paid Customers Satisfaction: 92.67
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Customer 4 (Regular) | Satisfaction 92 | Status: SEATED | Order: ComboMeal (Salad + Pasta) PREPARING (bill $24.30) 1/3
+Table 2: Empty
+
+Available Tasks:
+Host:
+- Wait
+Waiter:
+- Wait
+Chef:
+- Advance order at Table 1
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Host waits.
+
+Available Waiter Tasks:
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Advance order at Table 1
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Enter table number: Chef prepared one unit.
+Order: ComboMeal (Salad + Pasta) PREPARING (bill $24.30) 2/3
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 11 ---
+Served Count: 3
+Unhappy Departures: 0
+Paid Customers: 3
+Revenue: $35.70
+Average Paid Satisfaction: 92.67
+Turns Used: 11
+
+========= Turn 12 =========
+Revenue: $35.70
+Happy Hour: expired
+Average Paid Customers Satisfaction: 92.67
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Customer 4 (Regular) | Satisfaction 84 | Status: SEATED | Order: ComboMeal (Salad + Pasta) PREPARING (bill $24.30) 2/3
+Table 2: Empty
+
+Available Tasks:
+Host:
+- Wait
+Waiter:
+- Wait
+Chef:
+- Advance order at Table 1
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Host waits.
+
+Available Waiter Tasks:
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Advance order at Table 1
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Enter table number: Chef prepared one unit.
+Order: ComboMeal (Salad + Pasta) READY (bill $24.30)
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 12 ---
+Served Count: 3
+Unhappy Departures: 0
+Paid Customers: 3
+Revenue: $35.70
+Average Paid Satisfaction: 92.67
+Turns Used: 12
+
+========= Turn 13 =========
+Revenue: $35.70
+Happy Hour: expired
+Average Paid Customers Satisfaction: 92.67
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Customer 4 (Regular) | Satisfaction 76 | Status: SEATED | Order: ComboMeal (Salad + Pasta) READY (bill $24.30)
+Table 2: Empty
+
+Available Tasks:
+Host:
+- Wait
+Waiter:
+- Serve a READY order
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+Customer 5 (Regular) arrives.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Seat a queuing customer
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Enter customer number: Enter table number: Host seated Customer 5 at Table 2
+
+Available Waiter Tasks:
+- Take seated customer order
+- Serve a READY order
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Enter table number: Order served to Customer 4
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 13 ---
+Served Count: 4
+Unhappy Departures: 0
+Paid Customers: 3
+Revenue: $35.70
+Average Paid Satisfaction: 92.67
+Turns Used: 13
+
+========= Turn 14 =========
+Revenue: $35.70
+Happy Hour: expired
+Average Paid Customers Satisfaction: 92.67
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Customer 4 (Regular) | Satisfaction 76 | Status: SERVED | Order: ComboMeal (Salad + Pasta) SERVED (bill $24.30)
+Table 2: Customer 5 (Regular) | Satisfaction 92 | Status: SEATED | Order: none
+
+Available Tasks:
+Host:
+- Wait
+Waiter:
+- Take seated customer order
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Host waits.
+
+Available Waiter Tasks:
+- Take seated customer order
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Enter table number: Customer 5 (Regular) chooses Salad (menu $9.00, bill $9.00)
+
+Available Chef Tasks:
+- Advance order at Table 2
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Enter table number: Chef prepared one unit.
+Order: Salad READY (bill $9.00)
+
+--- Eating and Payment ---
+Customer 4 finished eating and is READY_TO_PAY.
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 14 ---
+Served Count: 4
+Unhappy Departures: 0
+Paid Customers: 3
+Revenue: $35.70
+Average Paid Satisfaction: 92.67
+Turns Used: 14
+
+========= Turn 15 =========
+Revenue: $35.70
+Happy Hour: expired
+Average Paid Customers Satisfaction: 92.67
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Customer 4 (Regular) | Satisfaction 76 | Status: READY_TO_PAY | Order: ComboMeal (Salad + Pasta) SERVED (bill $24.30)
+Table 2: Customer 5 (Regular) | Satisfaction 84 | Status: SEATED | Order: Salad READY (bill $9.00)
+
+Available Tasks:
+Host:
+- Wait
+Waiter:
+- Serve a READY order
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Host waits.
+
+Available Waiter Tasks:
+- Serve a READY order
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Enter table number: Order served to Customer 5
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+Customer 4 (Regular) paid $24.30
+Table has been freed.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 15 ---
+Served Count: 5
+Unhappy Departures: 0
+Paid Customers: 4
+Revenue: $60.00
+Average Paid Satisfaction: 88.50
+Turns Used: 15
+
+========= Turn 16 =========
+Revenue: $60.00
+Happy Hour: expired
+Average Paid Customers Satisfaction: 88.50
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Empty
+Table 2: Customer 5 (Regular) | Satisfaction 84 | Status: SERVED | Order: Salad SERVED (bill $9.00)
+
+Available Tasks:
+Host:
+- Wait
+Waiter:
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+Customer 6 (Regular) arrives.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Seat a queuing customer
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Host waits.
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+Customer 5 finished eating and is READY_TO_PAY.
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 16 ---
+Served Count: 5
+Unhappy Departures: 0
+Paid Customers: 4
+Revenue: $60.00
+Average Paid Satisfaction: 88.50
+Turns Used: 16
+
+========= Turn 17 =========
+Revenue: $60.00
+Happy Hour: expired
+Average Paid Customers Satisfaction: 88.50
+
+Waiting Queue:
+Customer 6 (Regular) | Satisfaction: 92 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Customer 5 (Regular) | Satisfaction 84 | Status: READY_TO_PAY | Order: Salad SERVED (bill $9.00)
+
+Available Tasks:
+Host:
+- Seat a queuing customer
+- Wait
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Seat a queuing customer
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Host waits.
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+Customer 5 (Regular) paid $9.00
+Table has been freed.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 17 ---
+Served Count: 5
+Unhappy Departures: 0
+Paid Customers: 5
+Revenue: $69.00
+Average Paid Satisfaction: 87.60
+Turns Used: 17
+
+========= Turn 18 =========
+Revenue: $69.00
+Happy Hour: expired
+Average Paid Customers Satisfaction: 87.60
+
+Waiting Queue:
+Customer 6 (Regular) | Satisfaction: 84 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Host:
+- Seat a queuing customer
+- Wait
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+Happy Hour remaining this turn: 0
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Host Tasks:
+- Seat a queuing customer
+- Wait
+
+Host:
+1. Seat queuing customer
+2. Wait
+Choose Host action: Host waits.
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 18 ---
+Served Count: 5
+Unhappy Departures: 0
+Paid Customers: 5
+Revenue: $69.00
+Average Paid Satisfaction: 87.60
+Turns Used: 18
+
+========= FINAL RESULTS =========
+VICTORY!
+Paid Customers: 5
+Served Count: 5
+Unhappy Departures: 0
+Revenue: $69.00
+Average Satisfaction: 87.60
+Turns Used: 18
