@@ -1,0 +1,1053 @@
+Restaurant Rush Game Starting...
+Stage 1 - Basic Restaurant Operation
+
+========= Turn 1 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+(empty)
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+Customer 1 arrives.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 1 ---
+Served Count: 0
+Unhappy Departures: 0
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 1
+
+========= Turn 2 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 1 | Satisfaction: 92 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 2 ---
+Served Count: 0
+Unhappy Departures: 0
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 2
+
+========= Turn 3 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 1 | Satisfaction: 84 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 3 ---
+Served Count: 0
+Unhappy Departures: 0
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 3
+
+========= Turn 4 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 1 | Satisfaction: 76 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+Customer 2 arrives.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 4 ---
+Served Count: 0
+Unhappy Departures: 0
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 4
+
+========= Turn 5 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 1 | Satisfaction: 68 | Status: WAITING
+Customer 2 | Satisfaction: 92 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 5 ---
+Served Count: 0
+Unhappy Departures: 0
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 5
+
+========= Turn 6 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 1 | Satisfaction: 60 | Status: WAITING
+Customer 2 | Satisfaction: 84 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 6 ---
+Served Count: 0
+Unhappy Departures: 0
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 6
+
+========= Turn 7 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 1 | Satisfaction: 52 | Status: WAITING
+Customer 2 | Satisfaction: 76 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+Customer 3 arrives.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 7 ---
+Served Count: 0
+Unhappy Departures: 0
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 7
+
+========= Turn 8 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 1 | Satisfaction: 44 | Status: WAITING
+Customer 2 | Satisfaction: 68 | Status: WAITING
+Customer 3 | Satisfaction: 92 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 8 ---
+Served Count: 0
+Unhappy Departures: 0
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 8
+
+========= Turn 9 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 1 | Satisfaction: 36 | Status: WAITING
+Customer 2 | Satisfaction: 60 | Status: WAITING
+Customer 3 | Satisfaction: 84 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 9 ---
+Served Count: 0
+Unhappy Departures: 0
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 9
+
+========= Turn 10 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 1 | Satisfaction: 28 | Status: WAITING
+Customer 2 | Satisfaction: 52 | Status: WAITING
+Customer 3 | Satisfaction: 76 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+Customer 4 arrives.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 10 ---
+Served Count: 0
+Unhappy Departures: 0
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 10
+
+========= Turn 11 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 1 | Satisfaction: 20 | Status: WAITING
+Customer 2 | Satisfaction: 44 | Status: WAITING
+Customer 3 | Satisfaction: 68 | Status: WAITING
+Customer 4 | Satisfaction: 92 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 11 ---
+Served Count: 0
+Unhappy Departures: 0
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 11
+
+========= Turn 12 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 1 | Satisfaction: 12 | Status: WAITING
+Customer 2 | Satisfaction: 36 | Status: WAITING
+Customer 3 | Satisfaction: 60 | Status: WAITING
+Customer 4 | Satisfaction: 84 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 12 ---
+Served Count: 0
+Unhappy Departures: 0
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 12
+
+========= Turn 13 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 1 | Satisfaction: 4 | Status: WAITING
+Customer 2 | Satisfaction: 28 | Status: WAITING
+Customer 3 | Satisfaction: 52 | Status: WAITING
+Customer 4 | Satisfaction: 76 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+Customer 5 arrives.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+Customer 1 abandoned the restaurant.
+
+--- End of Turn 13 ---
+Served Count: 0
+Unhappy Departures: 1
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 13
+
+========= Turn 14 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 2 | Satisfaction: 20 | Status: WAITING
+Customer 3 | Satisfaction: 44 | Status: WAITING
+Customer 4 | Satisfaction: 68 | Status: WAITING
+Customer 5 | Satisfaction: 92 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 14 ---
+Served Count: 0
+Unhappy Departures: 1
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 14
+
+========= Turn 15 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 2 | Satisfaction: 12 | Status: WAITING
+Customer 3 | Satisfaction: 36 | Status: WAITING
+Customer 4 | Satisfaction: 60 | Status: WAITING
+Customer 5 | Satisfaction: 84 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 15 ---
+Served Count: 0
+Unhappy Departures: 1
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 15
+
+========= Turn 16 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 2 | Satisfaction: 4 | Status: WAITING
+Customer 3 | Satisfaction: 28 | Status: WAITING
+Customer 4 | Satisfaction: 52 | Status: WAITING
+Customer 5 | Satisfaction: 76 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+Customer 6 arrives.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+Customer 2 abandoned the restaurant.
+
+--- End of Turn 16 ---
+Served Count: 0
+Unhappy Departures: 2
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 16
+
+========= Turn 17 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 3 | Satisfaction: 20 | Status: WAITING
+Customer 4 | Satisfaction: 44 | Status: WAITING
+Customer 5 | Satisfaction: 68 | Status: WAITING
+Customer 6 | Satisfaction: 92 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 17 ---
+Served Count: 0
+Unhappy Departures: 2
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 17
+
+========= Turn 18 =========
+Revenue: $0.00
+Average Paid Customers Satisfaction: N/A
+
+Waiting Queue:
+Customer 3 | Satisfaction: 12 | Status: WAITING
+Customer 4 | Satisfaction: 36 | Status: WAITING
+Customer 5 | Satisfaction: 60 | Status: WAITING
+Customer 6 | Satisfaction: 84 | Status: WAITING
+
+Tables:
+Table 1: Empty
+Table 2: Empty
+
+Available Tasks:
+Waiter:
+- Seat a queuing customer
+- Wait
+Chef:
+- Wait
+Cashier: Automatic payment when eligible
+
+--- Arrivals ---
+No new arrivals.
+
+--- Manager Choices ---
+
+Available Waiter Tasks:
+- Seat a queuing customer
+- Wait
+
+Waiter:
+1. Seat queuing customer
+2. Take order
+3. Serve an order
+4. Wait
+Choose Waiter action: Waiter waits.
+
+Available Chef Tasks:
+- Wait
+
+Chef:
+1. Advance order
+2. Wait
+Choose Chef action: Chef waits.
+
+--- Eating and Payment ---
+No customer eligible for payment.
+
+--- Satisfaction and Abandonment ---
+
+--- End of Turn 18 ---
+Served Count: 0
+Unhappy Departures: 2
+Paid Customers: 0
+Revenue: $0.00
+Average Paid Satisfaction: N/A
+Turns Used: 18
+
+========= FINAL RESULTS =========
+DEFEAT!
+Paid Customers: 0
+Served Count: 0
+Unhappy Departures: 2
+Revenue: $0.00
+Average Satisfaction: N/A
+Turns Used: 18
