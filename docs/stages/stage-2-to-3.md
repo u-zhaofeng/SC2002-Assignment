@@ -18,21 +18,13 @@ These changes allowed us to extend the restaurant's functionality while retainin
 ### GitHub Change Summary
 
 | Metric | Result |
-
 |---|---|
-
 | Commits | 17 |
-
 | Files changed | 7 |
-
 | Lines added | 211 |
-
 | Lines deleted | 22 |
-
 | New classes | 4 |
-
 | Modified classes | 3 |
-
 | Net deleted classes | 0 |
 
 
@@ -41,15 +33,10 @@ These changes allowed us to extend the restaurant's functionality while retainin
 Four classes were introduced in Stage 3 to implement the additional requirements.
 
 | Class | Responsibility | Reason for Addition |
-
 |---|---|---|
-
 | `Host.java` | Provides an additional staff role that seats queued customers. | Allows customers to be seated independently of the Waiter's assigned task. |
-
 | `SeatingService.java` | Validates and performs customer seating operations. | Prevents duplication of seating logic between Host and Waiter. |
-
 | `ComboMeal.java` | Extends MenuItem and combines two existing menu items. | Supports combo meals while reusing the existing menu and order-processing structure. |
-
 | `HappyHourPolicy.java` | Manages Happy Hour activation, duration, discounts and satisfaction recovery. | Separates temporary pricing and recovery rules from the main restaurant controller. |
 
 
@@ -107,13 +94,9 @@ The combo price is calculated as 90% of the combined item prices, rounded to the
 For example:
 
 | Item | Price | Preparation Units |
-
 |---|---|---|
-
 | Salad | $9.00 | 1 |
-
 | Pasta | $18.00 | 2 |
-
 | Salad + Pasta Combo | $24.30 | 3 |
 
 
@@ -139,19 +122,12 @@ The policy can be activated once per game and remains active for two consecutive
 Its main methods include:
 
 | Method | Responsibility |
-
 |---|---|
-
 | `hasBeenActivated()` | Checks whether Happy Hour has already been used. |
-
 | `activate(int turnNo)` | Activates Happy Hour during the selected turn. |
-
 | `isActive(int turnNo)` | Checks whether Happy Hour is active in the current turn. |
-
 | `remainingTurns(int turnNo)` | Returns the remaining active duration. |
-
 | `billCents()` | Calculates the final price after applicable discounts. |
-
 | `recoverWaitingCustomers()` | Restores satisfaction for eligible customers. |
 
 
@@ -174,13 +150,9 @@ The customer's satisfaction is capped at 100.
 Three existing classes were modified during the Stage 2 to Stage 3 transition.
 
 | Class | Modification | Reason |
-
 |---|---|---|
-
 | `Customer.java` | Added an overloaded `setOrder()` method that accepts a calculated bill amount. | Allows orders to store prices calculated using Happy Hour and customer-specific discounts. |
-
 | `Waiter.java` | Delegated seating to SeatingService and added an overloaded `takeOrder()` method. | Reuses common seating logic and supports orders with calculated prices. |
-
 | `RestaurantRushGame.java` | Integrated Host, ComboMeal and HappyHourPolicy into the game setup and turn sequence. | Coordinates the new Stage 3 features while retaining the existing restaurant workflow. |
 
 
@@ -356,30 +328,18 @@ The main additions are the separate Host seating action, ComboMeal ordering and 
 The following functionality should be verified using the Stage 3 version.
 
 | Test | Expected Result | Actual Result |
-
 |---|---|---|
-
-| Regular customer behaviour | Original satisfaction and ordering rules remain correct | Pending |
-
-| VIP customer pricing | VIP receives a 10% discount | Pending |
-
-| Critic behaviour | Critic retains its distinct satisfaction loss and food preference | Pending |
-
-| Waiter seating | Waiter can still seat a queued customer | Pending |
-
-| Host seating | Host can seat one queued customer independently | Pending |
-
-| ComboMeal pricing | Combo price equals 90% of combined item prices | Pending |
-
-| ComboMeal preparation | Preparation units equal the sum of component units | Pending |
-
-| Happy Hour activation | Can only be activated once per game | Pending |
-
-| Happy Hour pricing | Additional 20% discount during active turns | Pending |
-
-| Satisfaction recovery | Eligible customers recover 15 points, capped at 100 | Pending |
-
-| Victory and defeat | Original game objectives remain unchanged | Pending |
+| Regular customer behaviour | Original satisfaction and ordering rules remain correct | PASSED |
+| VIP customer pricing | VIP receives a 10% discount | PASSED |
+| Critic behaviour | Critic retains its distinct satisfaction loss and food preference | PASSED |
+| Waiter seating | Waiter can still seat a queued customer | PASSED |
+| Host seating | Host can seat one queued customer independently | PASSED |
+| ComboMeal pricing | Combo price equals 90% of combined item prices | PASSED |
+| ComboMeal preparation | Preparation units equal the sum of component units | PASSED |
+| Happy Hour activation | Can only be activated once per game | PASSED |
+| Happy Hour pricing | Additional 20% discount during active turns | PASSED |
+| Satisfaction recovery | Eligible customers recover 15 points, capped at 100 | PASSED |
+| Victory and defeat | Original game objectives remain unchanged | PASSED |
 
 
 Actual results will be documented in [Testing Documentation](../../tests/README.md).

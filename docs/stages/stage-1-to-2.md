@@ -30,21 +30,13 @@ ordering, preparation, serving, and payment processes.
 ### GitHub Change Summary
 
 | Metric | Result |
-
 |---|---|
-
 | Commits | 9 |
-
 | Files changed | 6 |
-
 | Lines added | 121 |
-
 | Lines deleted | 47 |
-
 | New classes | 3 |
-
 | Modified classes | 3 |
-
 | Net deleted classes | 0 |
 
 
@@ -53,13 +45,9 @@ ordering, preparation, serving, and payment processes.
 The following classes were introduced in Stage 2.
 
 | Class | Responsibility | Reason for Addition |
-
 |---|---|---|
-
 | `VIPCustomer.java` | Extends Customer and implements VIP-specific satisfaction and discount behaviour. | Supports VIP customers without changing the main restaurant workflow. |
-
 | `CriticCustomer.java` | Extends Customer and implements Critic-specific satisfaction and food selection behaviour. | Supports a customer type with different waiting penalties and food preferences. |
-
 | `CustomerFactory.java` | Creates the appropriate Customer subclass using the customer number. | Centralizes customer creation and reduces direct subclass instantiation in the game controller. |
 
 
@@ -104,13 +92,9 @@ This allows the game controller to request a customer object without directly co
 Three existing classes were modified during the transition.
 
 | Class | Modification | Reason |
-
 |---|---|---|
-
 | `Customer.java` | Added methods for customer type, satisfaction penalties, food selection, and bill calculation. | Allows subclasses to override customer-specific behaviour. |
-
 | `Order.java` | Added `billCents`, an overloaded constructor, and `getBillCents()`. | Stores the actual customer bill instead of assuming every customer pays the standard menu price. |
-
 | `RestaurantRushGame.java` | Integrated CustomerFactory and delegated customer-specific decisions to Customer objects. | Supports multiple customer types without rewriting the overall turn sequence. |
 
 
@@ -123,17 +107,11 @@ In Stage 1, all customers shared the same satisfaction penalty, pricing rules, a
 Stage 2 introduced the following methods:
 
 | Method | Purpose |
-
 |---|---|
-
 | `getTypeLabel()` | Returns the customer's type. |
-
 | `getWaitingSatisfactionLoss()` | Returns the applicable waiting penalty. |
-
 | `applyWaitingPenalty()` | Applies the customer's satisfaction penalty. |
-
 | `chooseFood(List<MenuItem> menu)` | Determines the customer's food selection. |
-
 | `calculateBillCents(MenuItem item)` | Calculates the customer's bill. |
 
 
@@ -279,20 +257,13 @@ The main difference is that individual Customer objects now determine their own 
 The following Stage 1 behaviours should be verified in Stage 2:
 
 | Test | Expected Result | Actual Result |
-
 |---|---|---|
-
-| Customer arrivals | Customers arrive on the scheduled turns | Pending |
-
-| Waiter actions | At most one Waiter task per turn | Pending |
-
-| Chef preparation | One preparation unit per turn | Pending |
-
-| Customer payment | Cashier charges eligible customers | Pending |
-
-| Victory condition | All three objectives are satisfied | Pending |
-
-| Defeat condition | At least one objective is not satisfied | Pending |
+| Customer arrivals | Customers arrive on the scheduled turns | PASSED|
+| Waiter actions | At most one Waiter task per turn | PASSED |
+| Chef preparation | One preparation unit per turn | PASSED |
+| Customer payment | Cashier charges eligible customers | PASSED |
+| Victory condition | All three objectives are satisfied | PASSED |
+| Defeat condition | At least one objective is not satisfied | PASSED |
 
 
 Actual testing evidence will be recorded in [Testing Documentation](../../tests/README.md).
