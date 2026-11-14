@@ -82,14 +82,16 @@ SC2002-Assignment/
 └── .gitignore
 ```
 
+
 ## UML Diagrams
 
 | Diagram | Stage |
 |---|---|
-| Class Diagram 1 | Stage 1 |
-| Class Diagram 2 | Stage 2 |
-| Class Diagram 3 | Stage 3 |
-| Sequence Diagram | Stage 2 or Stage 3 |
+| [Class Diagram 1](docs/uml/class-diagrams/stage-1/stage-1.png) | Stage 1 |
+| [Class Diagram 2](docs/uml/class-diagrams/stage-2/stage-2.png) | Stage 2 |
+| [Class Diagram 3](docs/uml/class-diagrams/stage-3/stage-3.png) | Stage 3 |
+| [Sequence Diagram](docs/uml/sequence-diagrams/RestaurantRush_Stage3_Sequence_Diagram.png) | Stage 3 |
+
 
 
 
