@@ -136,6 +136,18 @@ Video link: To be added.
 
 Video timestamps will be added after recording.
 
+
+
 ## Group Members and AI Histories
 
-To be completed with each member's GitHub branch and full AI conversation history.
+Each group member's AI conversation history is documented
+in their respective GitHub branches, with additional
+ChatGPT conversation links where available.
+
+| Group Member | GitHub AI History | ChatGPT Conversation |
+|---|---|---|
+| Member 1 |Teo Shao Yang Darius |[View AI History](https://github.com/u-zhaofeng/SC2002-Assignment/tree/ai-history-darius/ai-history) | [View ChatGPT Conversation](https://chatgpt.com/share/6af876d6-ba24-83ec-a08e-9618af63a15e) |
+| Member 2 |Chiang WenXuan | NIL | NIL |
+| Member 3 |Foong Zhao Feng | NIL | NIL |
+
+
